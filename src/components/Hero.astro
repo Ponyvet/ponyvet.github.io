@@ -1,5 +1,6 @@
 ---
-
+import { Image } from "astro:assets";
+import dogImage from "../assets/dog.svg";
 ---
 
 <section
@@ -23,8 +24,8 @@
     </a>
   </div>
   <div class="flex-1">
-    <img
-      src="dog.svg"
+    <Image
+      src={dogImage}
       alt="Pony"
       class="aspect-square bg-main rounded-3xl drop-shadow-lg"
     />
