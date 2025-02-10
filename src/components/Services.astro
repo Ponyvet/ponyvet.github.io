@@ -1,0 +1,45 @@
+---
+const services = [
+  {
+    title: "Consultas Veterinarias",
+    description:
+      "Atención médica especializada para tus mascotas, con un enfoque personalizado y profesional.",
+    link: "#",
+  },
+  {
+    title: "Emergencias 24/7",
+    description:
+      "Atención urgente para tus animales, disponible las 24 horas del día, los 7 días de la semana.",
+    link: "#",
+  },
+  {
+    title: "Cuidado de Animales de Granja",
+    description:
+      "Servicios veterinarios especializados para animales de granja como vacas, borregos y más.",
+    link: "#",
+  },
+];
+---
+
+<section class="bg-secondary xl:px-8 px-4 py-12" id="services">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-3xl font-bold text-center text-dark mb-12">
+      Nuestros Servicios
+    </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      {
+        services.map((service) => (
+          <div class="bg-background shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <h3 class="text-xl font-semibold text-headline mb-4">
+              {service.title}
+            </h3>
+            <p class="text-secondary mb-4">{service.description}</p>
+            <a href={service.link} class="text-primary">
+              Más información
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

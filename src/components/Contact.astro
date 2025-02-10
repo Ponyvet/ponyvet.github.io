@@ -1,0 +1,49 @@
+---
+const data = {
+  address:
+    "Av Donato Lopez 132. Santa María Amajact, San Salvador. Hidalgo. México.",
+  phone: "+52 772 104 1190",
+  email: "clinica.ponyvet@gmail.com",
+};
+---
+
+<section class="bg-background py-12" id="contact">
+  <div class="max-w-5xl mx-auto md:px-8 px-4">
+    <h2 class="text-3xl font-bold text-center text-headline mb-12">
+      Contáctanos
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-xl font-semibold text-headline mb-4">
+          Información de contacto
+        </h3>
+        <ul class="space-y-4 text-secondary">
+          <li>
+            <strong>Dirección:</strong>
+            {data.address}
+          </li>
+          <li>
+            <strong>Teléfono:</strong>
+            <a href={`tel:${data.phone}`} class="text-primary">{data.phone}</a>
+          </li>
+          <li>
+            <strong>Correo electrónico:</strong>
+            <a href={`mailto:${data.email}`} class="text-primary"
+              >{data.email}</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mapa -->
+      <div class="relative h-80">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d233.9893850694136!2d-98.99581957359328!3d20.224377446050372!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1ses-419!2smx!4v1739154886113!5m2!1ses-419!2smx"
+          class="absolute inset-0 w-full h-full rounded-lg"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
